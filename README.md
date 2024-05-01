@@ -1,4 +1,4 @@
-# 🏥 Previsão de Preços de Seguro com Regressão Linear
+# 🏥 Previsão de Preços de Seguro com Regressão 
 
 Projeto baseado no dataset Medical Cost Personal Datasets encontrado no [Kaggle](https://www.kaggle.com/datasets/mirichoi0218/insurance) e disponibilizado por [Miri Choi](https://www.kaggle.com/mirichoi0218).
 ### 🛠️ Ferramentas utilizadas
@@ -33,11 +33,11 @@ Através dos métodos shape, head(), tail() e info() busquei entender a estrutur
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot3.png?raw=true)
 #### Sobre a visualização
-Existe um grande volume dos beneficiários com um IMC que pode ser considerado alto, um índice acima de 25 indica sobrepeso e acima de 30 já se está em obesidade. Sobrepeso e altas percentagens de gordura na composição corporal são questões que afetam muito negativamente a saúde e aumentam índices de diversas doenças, ou seja maior necessidade do uso de serviços de medicina.
+Existe um grande volume de beneficiários com um IMC que pode ser considerado alto; um índice acima de 25 indica sobrepeso, e acima de 30 já se está em obesidade. Sobrepeso e altas percentagens de gordura na composição corporal são questões que afetam muito negativamente a saúde e aumentam os índices de diversas doenças, ou seja, maior necessidade do uso de serviços de medicina.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot4.png?raw=true)
 #### Sobre a visualização
-Mais de 40% dos registros do conjunto de dados são de pessoas sem dependentes, o maior volume de pessoas com filhos fica entre 1 e 2. Maior número de dependentes, também indica maior frequência no uso de serviços médicos.
+Mais de 40% dos registros do conjunto de dados são de pessoas sem dependentes; o maior volume de pessoas com filhos está entre 1 e 2. Um maior número de dependentes também indica uma maior frequência no uso de serviços médicos.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot5.png?raw=true)
 
@@ -47,7 +47,7 @@ Mais de 40% dos registros do conjunto de dados são de pessoas sem dependentes, 
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot7.png?raw=true)
 #### Sobre a visualização
-Nosso target mostra um comportamento diferente da normal em sua distribuição. Acredito que será necessário fazer uma transformação logaritimica na variável para adequar ao modelo. Vamos visualizar um boxplot para ter outra perspectiva da distribuição.
+Nosso target apresenta um comportamento diferente da normal em sua distribuição. Acredito que será necessário fazer uma transformação logarítmica na variável para adequá-la ao modelo. Vamos visualizar um boxplot para obter outra perspectiva da distribuição.
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot8.png?raw=true)
 #### Sobre a visualização
 Apesar da existência de outliers, pela quantidade limitada de dados vou optar por não remover estes registros.
@@ -56,28 +56,28 @@ Apesar da existência de outliers, pela quantidade limitada de dados vou optar p
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot10.png?raw=true)
 #### Sobre a visualização
-Existe uma tendência de aumento de preço, de acordo com aumento da idade. O que é natural, pessoas idosas precisam de maiores cuidados medicos.
+Existe uma tendência de aumento de preço de acordo com o aumento da idade. Isso é natural, já que as pessoas idosas precisam de maiores cuidados médicos. Mais uma vez é possível observar como o tabagismo afeta os custos.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot11.png?raw=true)
 #### Sobre a visualização
-Apesar do equilibrio na distribuição entre homens e mulheres, homens tem custos mais altos de seguro saúde.
+Existe um equilibrio nos custos para cada gênero, mais uma vez o que mais faz diferença é fumar ou não.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot12.png?raw=true)
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot13.png?raw=true)
 #### Sobre a visualização
-Existe uma tendência de aumento dos custos de acordo com o IMC, como ressaltado anteriormente sobrepeso é uma comorbidade que torna mais fácil contrair certas condições de saúde.
+Existe uma tendência de aumento dos custos de acordo com o IMC. Como destacado anteriormente, o sobrepeso é uma comorbidade que torna mais fácil contrair certas condições de saúde.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot14.png?raw=true)
 #### Sobre a visualização
-Pessoas com dois dependentes tem maiores custos com o seguro, apesar do maior número de beneficiários terem apenas 1 filho ou nenhum.
+Pessoas com dois dependentes têm maiores custos com o seguro, apesar de a maioria dos beneficiários ter apenas um filho ou nenhum.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot15.png?raw=true)
 #### Sobre a visualização
-Ser fumante é um fator muito preponderante nos custos.
+Ser fumante é um fator muito preponderante nos custos. Como pudemos ver durante toda a análise o hábito do tabagismo vai aumentar consideravelmente os valores do seguro.
 
 ![img](https://github.com/datalopes1/medical_cost/blob/main/doc/img/plot16.png?raw=true)
 
-# 🤖 4. Regressão Linear
+# 🤖 4. Regressão 
 ## 4.1. Pré-processamento dos dados
 ### Transformação logarítmica
 Como observado durante a análise exploratória, a distribuição de 'charges' tem uma assimétria. Vou aplicar uma transformação antes de prosseguir.
